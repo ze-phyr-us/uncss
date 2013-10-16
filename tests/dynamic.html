@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic test</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="test">
+    </div>
+<script>
+    var child = document.createElement('h1');
+
+    child.innerText = 'TESTING';
+
+    document.getElementById('test').appendChild(child);
+</script>
+</body>
+</html>

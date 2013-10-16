@@ -49,5 +49,6 @@ Usage
 ## License: MIT ##
 
 
-### Features planned: ###
-- Add PhantomJS integration
+### TODO: ###
+- Support for @-rules
+- Add more tests
