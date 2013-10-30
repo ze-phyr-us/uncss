@@ -3,18 +3,22 @@
 <head>
     <meta charset="utf-8">
     <title>Dynamic test</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <div id="test">
     </div>
 <script>
+function createEl() {
     var child = document.createElement('h1');
 
     child.innerText = 'TESTING';
-
     document.getElementById('test').appendChild(child);
+}
+
+setTimeout(createEl, 500);
 </script>
 </body>
 </html>

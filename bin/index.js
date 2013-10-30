@@ -10,13 +10,15 @@ program
     .usage('[options] <file ...>')
     .option('-c, --compress', 'Compress CSS output')
     .option('-i, --ignore <selector, ...>', 'Do not remove given selectors')
+    .option('-t, --timeout <milliseconds>', 'Specify how long to wait for javascript evaluation')
     .parse(process.argv);
 
 options = {
     compress: program.compress || false,
-    ignore: program.ignore
+    ignore:   program.ignore
         ? program.ignore.split(', ')
-        : []
+        : [],
+    timeout:  program.timeout || 1000
 };
 
 if (program.args.length === 0) {

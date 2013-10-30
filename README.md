@@ -15,10 +15,12 @@ Usage
 
   Options:
 
-    -h, --help                   output usage information
-    -V, --version                output the version number
-    -c, --compress               Compress CSS output
-    -i, --ignore=<selector ...>  Do not remove given selectors
+    -h, --help                    output usage information
+    -V, --version                 output the version number
+    -c, --compress                Compress CSS output
+    -i, --ignore <selector, ...>  Do not remove given selectors
+    -t, --timeout <milliseconds>  Specify how long to wait for javascript evaluation
+
 
 
 ### Within node: ###
@@ -27,8 +29,9 @@ Usage
 
     var files   = ['my', 'array', 'of', 'HTML', 'files'],
         options = {
-            ignore: ['#added_at_runtime', '.created_by_jQuery']
             compress: true,
+            ignore: ['#added_at_runtime', '.created_by_jQuery'],
+            timeout: 1000
         };
 
     uncss(files, options, function (output) {
@@ -46,9 +49,9 @@ Usage
         console.log(output);
     });
 
-## License: MIT ##
+## License ##
+Copyright (c) 2013 Giacomo Martino. See the LICENSE.md file for license rights and limitations (MIT).
 
-
-### TODO: ###
+### Features planned: ###
 - Support for @-rules
 - Add more tests
