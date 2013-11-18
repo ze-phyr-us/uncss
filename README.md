@@ -1,6 +1,16 @@
 # UnCSS #
 
-Remove unused styles from CSS
+Remove unused styles from CSS.
+
+This fork allows you to provide stylesheet paths in the options instead of having uncss parse them
+out of the HTML files. Example:
+
+    uncss(['index.html', 'about.html'], {stylesheets: ['bootstrap.css', 'app.css']}, function (output) {
+        console.log(output);
+    });
+
+Original README follows.
+
 
 ## Installation: ##
 
